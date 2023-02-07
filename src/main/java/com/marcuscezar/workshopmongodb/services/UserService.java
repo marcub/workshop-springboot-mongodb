@@ -1,6 +1,7 @@
 package com.marcuscezar.workshopmongodb.services;
 
 import com.marcuscezar.workshopmongodb.domain.User;
+import com.marcuscezar.workshopmongodb.dto.UserDTO;
 import com.marcuscezar.workshopmongodb.repository.UserRepository;
 import com.marcuscezar.workshopmongodb.services.exception.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,14 @@ public class UserService {
             throw new ObjectNotFoundException("Objeto não encontrado");
         }
         return user;
+    }
+
+    public User insert(User obj) {
+        return repository.insert(obj);
+    }
+
+    public User fromDTO(UserDTO obj) {
+        return new User(obj.getId(), obj.getName(), obj.getEmail());
     }
 
 
