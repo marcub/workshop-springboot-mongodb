@@ -1,0 +1,22 @@
+package com.marcuscezar.workshopmongodb.services;
+
+import com.marcuscezar.workshopmongodb.domain.Post;
+import com.marcuscezar.workshopmongodb.repository.PostRepository;
+import com.marcuscezar.workshopmongodb.services.exception.ObjectNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class PostService {
+
+    @Autowired
+    private PostRepository repository;
+
+    public Post findById(String id) {
+        Post post = repository.findById(id).orElse(null);
+        if (post == null) {
+            throw new ObjectNotFoundException("Objeto não encontrado");
+        }
+        return post;
+    }
+}
