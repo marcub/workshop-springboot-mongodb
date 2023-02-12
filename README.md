@@ -6,10 +6,10 @@ Projeto de acesso a dados em banco de dados NoSQL utilizando Spring Boot e Mongo
 
 
 ## Modelo conceitual
-![Modelo Conceitual](https://github.com/marcub/project_springboot_jpa/blob/main/assets/domain-model.png)
+![Modelo Conceitual](https://github.com/marcub/workshop-springboot-mongodb/blob/main/assets/domain-model.png)
 
 ## Camadas lógicas
-![Camadas Lógicas](https://github.com/marcub/project_springboot_jpa/blob/main/assets/layout-layers.png)
+![Camadas Lógicas](https://github.com/marcub/workshop-springboot-mongodb/blob/main/assets/layout-layers.png)
 
 # Tecnologias utilizadas
 ## Back end
